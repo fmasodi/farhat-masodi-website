@@ -127,7 +127,6 @@ function ProjectsSection() {
       <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" />
       <div className="projects-grid">
         <article className="project-card">
-          <div className="project-image-placeholder" aria-hidden="true" />
           <div className="project-details">
             <p className="project-number">PROJECT 01</p>
             <h3>Slot Machine Simulation</h3>
