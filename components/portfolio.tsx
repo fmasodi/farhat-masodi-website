@@ -124,43 +124,20 @@ function SkillsSection() {
 function ProjectsSection() {
   return (
     <section className="content-section projects-section" id="projects" aria-labelledby="projects-title">
-      <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" description="A space for projects as they take shape." />
+      <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" />
       <div className="projects-grid">
-        {[
-          {
-            number: '01',
-            title: 'Slot Machine Simulation',
-            description: 'A slot machine simulation I developed in C and ran on GMU’s Zeus Linux system.',
-            technologies: ['C', 'Linux', 'Zeus'],
-          },
-          {
-            number: '02',
-            title: 'Project title',
-            description: 'Add a short project description here.',
-            technologies: [],
-          },
-        ].map((project) => (
-          <article className="project-card" key={project.number}>
-            <div className="project-image-placeholder" aria-label={`Project ${project.number} screenshot placeholder`}>
-              <div className="placeholder-window"><span /><span /><span /></div>
-              <div className="placeholder-art"><Code2 aria-hidden="true" /><span>Screenshot can be added here</span></div>
-            </div>
-            <div className="project-details">
-              <p className="project-number">PROJECT {project.number}</p>
-              <h3>{project.title}</h3>
-              <p className={project.number === '01' ? 'project-description' : 'placeholder-copy'}>{project.description}</p>
-              {project.technologies.length > 0 ? (
-                <ul className="project-technologies" aria-label="Technologies used">
-                  {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
-                </ul>
-              ) : (
-                <p className="placeholder-link">GitHub link can be added here</p>
-              )}
-            </div>
-          </article>
-        ))}
+        <article className="project-card">
+          <div className="project-image-placeholder" aria-hidden="true" />
+          <div className="project-details">
+            <p className="project-number">PROJECT 01</p>
+            <h3>Slot Machine Simulation</h3>
+            <p className="project-description">A slot machine simulation I developed in C and ran on GMU’s Zeus Linux system.</p>
+            <ul className="project-technologies" aria-label="Technologies used">
+              {['C', 'Linux', 'Zeus'].map((technology) => <li key={technology}>{technology}</li>)}
+            </ul>
+          </div>
+        </article>
       </div>
-      <p className="edit-note">These are editable placeholders—replace them with your project details, screenshots, and repository links.</p>
     </section>
   )
 }
