@@ -194,10 +194,10 @@ function ContactSection() {
           <h2 id="contact-title">Let&apos;s build what&apos;s next.</h2>
           <p>I&apos;m looking forward to connecting with teams working in cybersecurity and software development.</p>
         </div>
-        <div className="contact-details" aria-label="Contact details to be added">
-          <div className="contact-row"><span className="contact-icon"><Mail aria-hidden="true" /></span><span><span className="contact-label">Email</span><span className="contact-placeholder">Add professional email</span></span></div>
-          <div className="contact-row"><span className="contact-icon linkedin-mark" aria-hidden="true">in</span><span><span className="contact-label">LinkedIn</span><span className="contact-placeholder">Add LinkedIn profile</span></span></div>
-          <div className="contact-row"><span className="contact-icon github-mark" aria-hidden="true">GH</span><span><span className="contact-label">GitHub</span><span className="contact-placeholder">Add GitHub profile</span></span></div>
+        <div className="contact-details" aria-label="Contact details">
+          <div className="contact-row"><span className="contact-icon"><Mail aria-hidden="true" /></span><a className="contact-link" href="mailto:fmasodi@gmu.edu"><span className="contact-label">Email</span><span className="contact-placeholder">fmasodi@gmu.edu</span></a></div>
+          <div className="contact-row"><span className="contact-icon linkedin-mark" aria-hidden="true">in</span><a className="contact-link" href="https://www.linkedin.com/in/" target="_blank" rel="noreferrer"><span className="contact-label">LinkedIn</span><span className="contact-placeholder">www.linkedin.com/in/</span></a></div>
+          <div className="contact-row"><span className="contact-icon github-mark" aria-hidden="true">GH</span><a className="contact-link" href="https://github.com" target="_blank" rel="noreferrer"><span className="contact-label">GitHub</span><span className="contact-placeholder">github.com</span></a></div>
         </div>
       </div>
     </section>

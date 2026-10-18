@@ -148,9 +148,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-row:last-child { border-bottom: 0; }
 .contact-icon { display: grid; place-items: center; flex: none; width: 35px; height: 35px; border: 1px solid rgb(255 255 255 / 17%); border-radius: 7px; color: #a5ceca; font-size: 11px; font-weight: 700; }
 .contact-icon svg { width: 15px; height: 15px; }
-.contact-row > span:last-child { display: grid; gap: 1px; }
-.contact-label { color: #fff; font-size: 11px; font-weight: 700; }
-.contact-placeholder { color: #bac8d0; font-size: 10px; }
+.contact-row > span:last-child, .contact-link { display: grid; gap: 1px; }
+ .contact-link { color: inherit; text-decoration: none; }
+ .contact-link:hover .contact-placeholder, .contact-link:focus-visible .contact-placeholder { text-decoration: underline; text-underline-offset: 3px; }
+ .contact-label { color: #fff; font-size: 11px; font-weight: 700; }
+ .contact-placeholder { color: #bac8d0; font-size: 10px; }
 .site-footer { display: flex; align-items: center; justify-content: space-between; min-height: 78px; color: #7c8790; font-size: 10px; }
 .footer-brand { width: 28px; height: 28px; border-radius: 7px; font-size: 9px; }
 .site-footer p { margin: 0; }
