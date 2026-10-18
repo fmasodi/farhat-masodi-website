@@ -126,17 +126,36 @@ function ProjectsSection() {
     <section className="content-section projects-section" id="projects" aria-labelledby="projects-title">
       <SectionHeading id="projects-title" eyebrow="Selected work" title="Projects" description="A space for projects as they take shape." />
       <div className="projects-grid">
-        {[1, 2].map((project) => (
-          <article className="project-card" key={project}>
-            <div className="project-image-placeholder" aria-label={`Project ${project} screenshot placeholder`}>
+        {[
+          {
+            number: '01',
+            title: 'Slot Machine Simulation',
+            description: 'A slot machine simulation I developed in C and ran on GMU’s Zeus Linux system.',
+            technologies: ['C', 'Linux', 'Zeus'],
+          },
+          {
+            number: '02',
+            title: 'Project title',
+            description: 'Add a short project description here.',
+            technologies: [],
+          },
+        ].map((project) => (
+          <article className="project-card" key={project.number}>
+            <div className="project-image-placeholder" aria-label={`Project ${project.number} screenshot placeholder`}>
               <div className="placeholder-window"><span /><span /><span /></div>
               <div className="placeholder-art"><Code2 aria-hidden="true" /><span>Screenshot can be added here</span></div>
             </div>
             <div className="project-details">
-              <p className="project-number">PROJECT 0{project}</p>
-              <h3>Project title</h3>
-              <p className="placeholder-copy">Add a short project description here.</p>
-              <p className="placeholder-link">GitHub link can be added here</p>
+              <p className="project-number">PROJECT {project.number}</p>
+              <h3>{project.title}</h3>
+              <p className={project.number === '01' ? 'project-description' : 'placeholder-copy'}>{project.description}</p>
+              {project.technologies.length > 0 ? (
+                <ul className="project-technologies" aria-label="Technologies used">
+                  {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+                </ul>
+              ) : (
+                <p className="placeholder-link">GitHub link can be added here</p>
+              )}
             </div>
           </article>
         ))}
